@@ -19,10 +19,11 @@ Certainly, here's the updated "How to Run" section including the step for copyin
 To set up and run the project, please follow these instructions:
 
 1. **Set Up Environment Variables**:
-   Copy the `.env.local` file to `.env` to set your environment variables:
+   Copy the `.env.example` file to `.env` to set your environment variables:
    ```bash
    cp .env.local .env
    ```
+   Also add a valid candidateId.
 
 2. **Install Dependencies**:
    Install the necessary npm packages by running:
@@ -34,12 +35,6 @@ To set up and run the project, please follow these instructions:
    To solve the next goal, execute the following command:
    ```bash
    npm run solveNext
-   ```
-
-4. **Solve All Goals**:
-   To solve all goals iteratively, use the command:
-   ```bash
-   npm run solveAll
    ```
 
 Please ensure you are in the project's root directory when executing these commands.
