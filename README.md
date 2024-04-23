@@ -6,14 +6,6 @@ Thank you, Crossmint Team, for such an engaging challenge! Developing this archi
 
 Below are details about the architectural decisions made for this project, followed by several notes and observations that might be of interest.
 
-Certainly, here's a structured and formatted version of the "How to Run" section for a README:
-
----
-
-Certainly, here's the updated "How to Run" section including the step for copying `.env.local` to `.env`:
-
----
-
 ## How to Run
 
 To set up and run the project, please follow these instructions:
@@ -100,16 +92,7 @@ I choose to let it be there, because that would require more time and I don't re
 This time I choose to make logs at the request level (just to get a feedback of what's happening). For a real project, I'd make an environment-dependent logging framework.
 This time I chose to handle errors at the highest level, mainly because there is no need (relative to requirements) to be handled at the low level. A system that needs to publish error metrics or similar stuff would be adequate to implement low-level handling, and maybe spread the error to the higher level by rethrowing it.
 
-Here are the additional notes structured for inclusion in the README:
-
----
-
-## Notes
-
 ### Dependencies
-
-In this project:
-
 - **TypeScript**: Adopted for its robust type-safety features, which greatly enhance code reliability and maintainability. Its use aligns with the project's aim for high-quality standards.
 
 - **dotenv**: Utilized for its simplicity in managing environment variables, making setup and configuration straightforward and developer-friendly.
@@ -120,7 +103,7 @@ A minimalist approach was taken regarding library usage to minimize the final bu
 AI is a tool, and it's meant to be utilized. The integration of Language Models in this project is a testament to our commitment to harnessing advanced technologies to their fullest potential.
 
 ### Server Logic Issue:
-You might have seen my comment inside core -> MegaverseEditor/index.ts line 44. I tried to implement my batching system for parallel requests there (again, not the best place).
+You might have seen my comment inside core -> MegaverseEditor/index.ts -> solveNextGoalMap. I tried to implement my batching system for parallel requests there (again, not the best place).
 I noticed that your server returns responses with a 200 code for the requests while the database does not reflect the change, and only when I do parallel requests.
 If I have to guess, you are using a NoSQL database like MongoDB, the Megaverse structure is stored inside the same key-value, and you haven't properly configured the queries to fail if the data changed between the start and end of the execution of the update. That translates to updates overwriting each other.
 This issue can be critical to a system and denotes a lack of safeguards in handling concurrent updates, which could result in data discrepancies. It's very important to address this to maintain data integrity over high concurrency systems.
