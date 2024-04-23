@@ -1,0 +1,19 @@
+{
+  "name": "crossmint_challenge",
+  "version": "1.0.0",
+  "description": "Senior software engineer Crossmint challenge",
+  "main": "src/index.js",
+  "scripts": {
+    "solveNext": "tsc && node .dist/main/solveOneChallenge.js",
+    "solveAll": "tsc && node .dist/main/solveAllChallenges.js"
+  },
+  "author": "Gonzalo Alessandrelli",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
