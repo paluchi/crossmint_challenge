@@ -1,6 +1,5 @@
 import { ComethDirection } from "../../../core/domain/astrals/Cometh";
 import { SoloonColor } from "../../../core/domain/astrals/Soolon";
-import { RequestOptions } from "../../../core/domain/request";
 import { MegaverseRepository } from "../../../core/services/MegaverseEditor/types";
 import Fetcher from "../../../drivers/Fetcher";
 
